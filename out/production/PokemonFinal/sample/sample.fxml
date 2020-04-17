@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <ImageView fitHeight="512.0" fitWidth="891.0" layoutX="-177.0" layoutY="-21.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/StartShow.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="PlayBT" contentDisplay="BOTTOM" layoutX="68.0" layoutY="331.0" mnemonicParsing="false" onAction="#PlayBT" prefHeight="27.0" prefWidth="178.0" style="-fx-background-color: b11b24;" text="N E W G A M E" textFill="WHITE">
+            <font>
+                <Font name="Rockwell" size="18.0" />
+            </font>
+            <padding>
+                <Insets top="1.0" />
+            </padding>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Button>
+        <Button fx:id="PlayBT1" contentDisplay="BOTTOM" layoutX="338.0" layoutY="331.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="178.0" style="-fx-background-color: b11b24;" text="N E W G A M E" textFill="WHITE">
+            <font>
+                <Font name="Rockwell" size="18.0" />
+            </font>
+            <padding>
+                <Insets top="1.0" />
+            </padding>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Button>
+    </children>
+</Pane>
