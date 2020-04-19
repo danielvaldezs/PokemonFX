@@ -6,6 +6,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.awt.event.ActionEvent;
+import java.beans.ExceptionListener;
+import java.beans.XMLEncoder;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Motor {
@@ -78,12 +82,25 @@ public class Motor {
 
         }
     }
-    public void AllPokemons()
+
+    public void serializePoekemon() throws IOException {
+        Pokemon Bulbasaur  = new Pokemon("Balbasaur","Planta","Chico",1,50);
+
+
+        FileOutputStream fos=new FileOutputStream("Pokemondata.xml");
+        XMLEncoder encoder = new XMLEncoder(fos);
+        encoder.writeObject(Bulbasaur);
+        encoder.close();
+        fos.close();
+    }
+
+
+    public Pokemon  AllPokemons()
     {
-        Pokemon Balbasaur  = new Pokemon("Balbasaur","Planta","Chico",1,50);
+        Pokemon Bulbasaur  = new Pokemon("Balbasaur","Planta","Chico",1,50);
         //Balbasaur.setHabilidad(habilities);
         Pokemon Ivysaur = new Pokemon("Ivysaur", "Planta","Mediano",10,70);
-        Balbasaur.setEvolucion(Ivysaur);
+        Bulbasaur.setEvolucion(Ivysaur);
         Pokemon Venusaur = new Pokemon("Venusaur", "Planta","Grande",20,100);
         Ivysaur.setEvolucion(Venusaur);
         Pokemon Charmender = new Pokemon("Charmender","Fuego","Chico",1,50);
@@ -306,8 +323,8 @@ public class Motor {
         Pokemon Mew = new Pokemon("Mew","Psiquico","Grande",10,200);
         Pokemon Mariana = new Pokemon("Mariana","Psiquico","Chico",99,500);
 
-        System.out.println(Balbasaur.toString());
-
+//        System.out.println(Balbasaur.toString());
+        return Bulbasaur;
 
     }
 }

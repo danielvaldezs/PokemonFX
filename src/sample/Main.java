@@ -16,6 +16,9 @@ public class Main extends Application {
         Controller controller = loader.<Controller>getController();
         controller.receiveMotorInstance(motor);
 
+
+        Motor motor = new Motor();
+        motor.serializePoekemon();
         primaryStage.setTitle("Pokemon Final");
         primaryStage.setScene(new Scene(root, 570, 460));
         primaryStage.show();
