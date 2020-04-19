@@ -5,13 +5,13 @@ import java.util.ArrayList;
 
 public class Pokemon {
 
-    private String Nombre;
-    private String Tipo;
-    private ArrayList Habilidad;
-    private String Tamaño;
-    private int Nivel;
-    private int PVida;
-    private Pokemon Evolucion;
+    public String Nombre;
+     public String Tipo;
+    public ArrayList Habilidad;
+     public String Tamaño;
+     public int Nivel;
+     public int PVida;
+    Pokemon Evolucion;
     //private Habilidad habilidad;
 
 
@@ -26,70 +26,59 @@ public class Pokemon {
         this.PVida = PVida;
     }
 
-    public Pokemon getEvolucion()
-    {
-        return Evolucion;
-    }
-
-    public void setEvolucion(Pokemon evolucion)
-    {
-        Evolucion = evolucion;
-    }
-
-    public String getNombre()
-    {
+    public String getNombre() {
         return Nombre;
     }
 
-    public void setNombre(String nombre)
-    {
+    public void setNombre(String nombre) {
         Nombre = nombre;
     }
 
-    public String getTipo()
-    {
+    public String getTipo() {
         return Tipo;
     }
 
-    public void setTipo(String tipo)
-    {
+    public void setTipo(String tipo) {
         Tipo = tipo;
     }
 
-    public ArrayList getHabilidad()
-    {
+    public ArrayList getHabilidad() {
         return Habilidad;
     }
 
-    public void setHabilidad(ArrayList habilidad)
-    {
+    public void setHabilidad(ArrayList habilidad) {
         Habilidad = habilidad;
     }
 
-    public String getTamaño()
-    {
+    public String getTamaño() {
         return Tamaño;
     }
 
-    public void setNivel(int nivel)
-    {
-        Nivel = nivel;
+    public void setTamaño(String tamaño) {
+        Tamaño = tamaño;
     }
 
-    public int getNivel()
-    {
+    public int getNivel() {
         return Nivel;
     }
 
-    public void setPVida(int PVida)
-    {
-        this.PVida = PVida;
+    public void setNivel(int nivel) {
+        Nivel = nivel;
     }
 
-    public int getPVida()
-    {
+    public int getPVida() {
         return PVida;
     }
 
+    public void setPVida(int PVida) {
+        this.PVida = PVida;
+    }
 
+    public Pokemon getEvolucion() {
+        return Evolucion;
+    }
+
+    public void setEvolucion(Pokemon evolucion) {
+        Evolucion = evolucion;
+    }
 }

@@ -1,5 +1,6 @@
 package sample;
 
+import com.google.gson.Gson;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -9,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.beans.ExceptionListener;
 import java.beans.XMLEncoder;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -86,12 +88,27 @@ public class Motor {
     public void serializePoekemon() throws IOException {
         Pokemon Bulbasaur  = new Pokemon("Balbasaur","Planta","Chico",1,50);
 
+//
+//        FileOutputStream fos=new FileOutputStream("Pokemondata.xml");
+//        XMLEncoder encoder = new XMLEncoder(fos);
+//        encoder.writeObject(Bulbasaur);
+//        encoder.close();
+////        fos.close();
 
-        FileOutputStream fos=new FileOutputStream("Pokemondata.xml");
-        XMLEncoder encoder = new XMLEncoder(fos);
-        encoder.writeObject(Bulbasaur);
-        encoder.close();
-        fos.close();
+        Gson gson = new Gson();
+        String json = gson.toJson(Bulbasaur);
+
+        try {
+            //write converted json data to a file named "file.json"
+            FileWriter writer = new FileWriter("Pokedex.json");
+            writer.write(json);
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
     }
 
 
