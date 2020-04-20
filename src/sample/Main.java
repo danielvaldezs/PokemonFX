@@ -18,6 +18,7 @@ public class Main extends Application {
 
 
         Motor motor = new Motor();
+        motor.AllPokemons();
         motor.serializePoekemon();
         primaryStage.setTitle("Pokemon Final");
         primaryStage.setScene(new Scene(root, 570, 460));

@@ -13,11 +13,14 @@ import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Motor {
     public String UserName;
     public  String gender;
     public String StartedPokemon;
+public static ArrayList<Pokemon> list = new ArrayList<Pokemon>();
 
     public Motor()
     {
@@ -96,7 +99,7 @@ public class Motor {
 ////        fos.close();
 
         Gson gson = new Gson();
-        String json = gson.toJson(Bulbasaur);
+        String json = gson.toJson(list);
 
         try {
             //write converted json data to a file named "file.json"
@@ -114,58 +117,90 @@ public class Motor {
 
     public Pokemon  AllPokemons()
     {
+
         Pokemon Bulbasaur  = new Pokemon("Balbasaur","Planta","Chico",1,50);
-        //Balbasaur.setHabilidad(habilities);
+        list.add(Bulbasaur);
         Pokemon Ivysaur = new Pokemon("Ivysaur", "Planta","Mediano",10,70);
         Bulbasaur.setEvolucion(Ivysaur);
+        list.add(Ivysaur);
         Pokemon Venusaur = new Pokemon("Venusaur", "Planta","Grande",20,100);
         Ivysaur.setEvolucion(Venusaur);
-        Pokemon Charmender = new Pokemon("Charmender","Fuego","Chico",1,50);
+        list.add(Venusaur);
+        Pokemon Charmander = new Pokemon("Charmender","Fuego","Chico",1,50);
+        list.add(Charmander);
         Pokemon Charmeleon = new Pokemon("Charmeleon","Fuego","Mediano",10,70);
-        Charmender.setEvolucion(Charmeleon);
+        Charmander.setEvolucion(Charmeleon);
+        list.add(Charmeleon);
         Pokemon Charizard = new Pokemon("Charizard","Fuego","Grande",20,100);
         Charmeleon.setEvolucion(Charizard);
+        list.add(Charizard);
         Pokemon Squirtle = new Pokemon("Squirtle","Agua","Chico",1,50);
+        list.add(Squirtle);
         Pokemon Wartortle = new Pokemon("Wartotle","Agua","Mediano",10,70);
+        list.add(Wartortle);
         Squirtle.setEvolucion(Wartortle);
         Pokemon Blastoise = new Pokemon("Blastoise","Agua","Grande",1,100);
+        list.add(Blastoise);
         Wartortle.setEvolucion(Blastoise);
         Pokemon Caterpie = new Pokemon("Caterpie","Bicho","Chico",1,50);
+        list.add(Caterpie);
         Pokemon Metapod = new Pokemon("Metapod","Bicho","Mediano",10,70);
         Caterpie.setEvolucion(Metapod);
+        list.add(Caterpie);
         Pokemon Butterfree = new Pokemon("Butterfree","Bicho","Grande",1,100);
         Metapod.setEvolucion(Butterfree);
+        list.add(Butterfree);
         Pokemon Weedle = new Pokemon("Weedle","Bicho","Chico",1,50);
+        list.add(Weedle);
         Pokemon Kakuna = new Pokemon("Kakuna","Bicho","Mediano",10,70);
         Kakuna.setEvolucion(Weedle);
+        list.add(Kakuna);
         Pokemon Beedrill = new Pokemon("Beedrill","Bicho","Grande",1,100);
         Kakuna.setEvolucion(Beedrill);
+        list.add(Beedrill);
         Pokemon Pidgey = new Pokemon("Pidgey","Volador","Chico",1,50);
+        list.add(Pidgey);
         Pokemon Pidgeotto = new Pokemon("Pidgeotto","Volador","Mediano",10,70);
         Pidgey.setEvolucion(Pidgeotto);
+        list.add(Pidgeotto);
         Pokemon Pidgeot = new Pokemon("Pidgeot","Volador","Grande",1,100);
         Pidgeotto.setEvolucion(Pidgeot);
+        list.add(Pidgeot);
         Pokemon Rattata = new Pokemon("Rattata","Normal", "Mediano",1,70);
+        list.add(Rattata);
         Pokemon Raticate= new Pokemon("Raticate","Normal","Grande",10,100);
         Rattata.setEvolucion(Raticate);
+        list.add(Raticate);
         Pokemon Spearow = new Pokemon("Spearow","Volador","Mediano",1,70);
+        list.add(Spearow);
         Pokemon Fearow = new Pokemon("Fearow","Volador","Grande",10,100);
         Spearow.setEvolucion(Fearow);
+        list.add(Fearow);
         Pokemon Ekans = new Pokemon("Ekans","Veneno","Mediano",1,70);
+        list.add(Ekans);
         Pokemon Arbok = new Pokemon("Arbok","Veneno","Grande",10,100);
         Ekans.setEvolucion(Arbok);
+        list.add(Arbok);
         Pokemon Pikachu = new Pokemon("Pikachu","Electrico","Mediano",1,70);
+        list.add(Pikachu);
         Pokemon Raichu = new Pokemon("Raichu","Electrico","Grande",10,100);
         Pikachu.setEvolucion(Raichu);
+        list.add(Raichu);
         Pokemon Sandshrew = new Pokemon("Sandshrew","Tierra","Mediano",1,70);
+        list.add(Sandshrew);
         Pokemon Sandslash = new Pokemon("Sandlash","Tierra","Grande",10,100);
         Sandshrew.setEvolucion(Sandslash);
         Pokemon NidoranF = new Pokemon("Nidoran","Veneno","Chico",1,50);
+        list.add(NidoranF);
+
         Pokemon Nidorina= new Pokemon("Nidorina","Veneno","Mediano",10,70);
         NidoranF.setEvolucion(Nidorina);
+        list.add(Nidorina);
         Pokemon Nidoqueen = new Pokemon("Nidoqueen","Veneno","Grande",20,100);
         Nidorina.setEvolucion(Nidoqueen);
+        list.add(Nidoqueen);
         Pokemon NidoranM = new Pokemon("Nidroran","Veneno","Chico",1,50);
+        list.add(NidoranM);
         Pokemon Nidorino = new Pokemon("Nidrorano","Veneno","Mediano",10,70);
         NidoranM.setEvolucion(Nidorino);
         Pokemon Nidoking = new Pokemon("Nidoking","Veneno","Grande",20,100);
