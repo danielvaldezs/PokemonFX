@@ -6,25 +6,25 @@ import java.util.ArrayList;
 public class Pokemon {
 
     public String Nombre;
-     public String Tipo;
-    public ArrayList Habilidad;
-     public String Tamaño;
-     public int Nivel;
-     public int PVida;
+    public String Tipo;
+    public ArrayList habilidades;
+    public String Tamaño;
+    public int Nivel;
+    public int PVida;
     Pokemon Evolucion;
-    //private Habilidad habilidad;
+    public boolean alive;
 
-
-    public Pokemon(){}
-
-    public Pokemon(String Nombre, String Tipo, String Tamaño, int Nivel, int PVida)
-    {
-        this.Nombre = Nombre;
-        this.Tipo = Tipo;
-        this.Tamaño = Tamaño;
-        this.Nivel = Nivel;
+    public Pokemon(String nombre, String tipo, ArrayList habilidad, String tamaño, int nivel, int PVida, Pokemon evolucion, boolean alive) {
+        Nombre = nombre;
+        Tipo = tipo;
+        habilidades = habilidades;
+        Tamaño = tamaño;
+        Nivel = nivel;
         this.PVida = PVida;
+        Evolucion = evolucion;
+        alive = alive;
     }
+
 
     public String getNombre() {
         return Nombre;
@@ -42,12 +42,12 @@ public class Pokemon {
         Tipo = tipo;
     }
 
-    public ArrayList getHabilidad() {
-        return Habilidad;
+    public ArrayList getHabilidades() {
+        return habilidades;
     }
 
-    public void setHabilidad(ArrayList habilidad) {
-        Habilidad = habilidad;
+    public void setHabilidad(ArrayList habilidades) {
+        habilidades = habilidades;
     }
 
     public String getTamaño() {
@@ -80,5 +80,17 @@ public class Pokemon {
 
     public void setEvolucion(Pokemon evolucion) {
         Evolucion = evolucion;
+    }
+
+    public void setHabilidades(ArrayList habilidades) {
+        this.habilidades = habilidades;
+    }
+
+    public boolean isAlive() {
+        return alive;
+    }
+
+    public void setAlive(boolean alive) {
+        this.alive = alive;
     }
 }
